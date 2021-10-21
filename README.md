@@ -49,3 +49,15 @@ https://catalog.data.gov/dataset?q=energy&sort=score+desc%2C+name+asc&as_sfid=AA
 
 Federal Depository Library Program
 https://www.fdlp.gov/requirements-guidance/collections-and-databases
+=======
+
+
+adding some text about DB 
+
+
+
+Is Switching to Alternative Enerygy the future to save the Planet Earth?
+
+What is the environmental cost of the various types of alternative energy?
+
+
