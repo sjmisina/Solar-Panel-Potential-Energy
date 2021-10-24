@@ -5,7 +5,6 @@ Modern alternative energy solutions gaining adoption as climate change rises
 
 This is an attempt at a merge request.
 
-
 Sources for consideration
 EPA
 https://www.epa.gov/airmarkets/power-sector-emissions-data
@@ -51,3 +50,15 @@ https://catalog.data.gov/dataset?q=energy&sort=score+desc%2C+name+asc&as_sfid=AA
 
 Federal Depository Library Program
 https://www.fdlp.gov/requirements-guidance/collections-and-databases
+=======
+
+
+adding some text about DB 
+
+
+
+Is Switching to Alternative Enerygy the future to save the Planet Earth?
+
+What is the environmental cost of the various types of alternative energy?
+
+
