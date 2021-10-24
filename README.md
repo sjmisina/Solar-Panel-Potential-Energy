@@ -9,6 +9,7 @@ The reason we selected this topic is to hopefully encourage investors into inves
 ### Description of the data sources:
 Extract data from: https://developer.nrel.gov/.
 Features: Temperature, Wnid, Irradiance, Solar Zenith Angle. Database covering hourly. We can
+customize the api attributes based on features we need. Database converted to csv and added 
 
 ### Questions we hope to answer:
 
