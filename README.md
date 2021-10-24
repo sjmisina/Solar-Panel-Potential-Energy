@@ -62,3 +62,5 @@ Is Switching to Alternative Enerygy the future to save the Planet Earth?
 What is the environmental cost of the various types of alternative energy?
 
 
+Extract data from: https://developer.nrel.gov/. 
+Features: Temperature, Wnid, Irradiance, Solar Zenith Angle. Database covering hourly. We can customize the api attributes based on features we need. Database converted to csv and added to github.
