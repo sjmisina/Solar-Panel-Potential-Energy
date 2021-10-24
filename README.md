@@ -7,6 +7,7 @@
 The reason we selected this topic is to hopefully encourage investors into investing more into solar energy stations and solar technology. We would like to show how location and weather patterns can inform the potential for solar panel electrical generation.
 
 ### Description of the data sources:
+xtract data from: https://developer.nrel.gov/
 
 ### Questions we hope to answer:
 
