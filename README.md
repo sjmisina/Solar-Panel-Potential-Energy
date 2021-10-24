@@ -3,6 +3,8 @@
 Is Switching to Alternative enerygy the future to save the Planet Earth?
 Modern alternative energy solutions gaining adoption as climate change rises
 
+This is an attempt at a merge request.
+
 Sources for consideration
 EPA
 https://www.epa.gov/airmarkets/power-sector-emissions-data
