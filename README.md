@@ -3,6 +3,8 @@
 Is Switching to Alternative enerygy the future to save the Planet Earth?
 Modern alternative energy solutions gaining adoption as climate change rises
 
+Demo git push and merge
+
 
 Sources for consideration
 EPA
