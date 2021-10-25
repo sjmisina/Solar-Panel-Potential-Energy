@@ -33,7 +33,7 @@ https://nsrdb.nrel.gov/
 
 Database covering hourly global solar irradiance. We can customize the api attributes based on features we need. Database converted to csv.
 
-![solar irradiance map](Resources/Images/NSRDB Viewer.PNG)
+![solar irradiance map](https://github.com/jpburgess/Solar-Panel-Potential-Energy/blob/6d76a4e52033fb125a89e8ca9260ad007cf569d1/Resources/Images/NRSDB%20Viewer.PNG)
 
 ## Questions we hope to answer:
 
