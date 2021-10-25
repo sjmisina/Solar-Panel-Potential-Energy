@@ -10,11 +10,30 @@ The reason we selected this topic is to hopefully encourage state governments an
 
 ## Description of the data sources:
 
-NIST Photovoltaic Array Database - https://pvdata.nist.gov/ 
-Features: Electrical output, Irradiance, Temperature, Wind, and Solar Angle.  A database covering minute to minute solar panel output and weather data from 2015 to 2018.  Export to CSV.
+### NIST Photovoltaic Array Database 
+https://pvdata.nist.gov/ 
+#### Features: 
+- Electrical output
+- Irradiance
+- Temperature
+- Wind
+- Solar Angle
 
-Extract data from: https://developer.nrel.gov/. 
-Features: Temperature, Wnid, Irradiance, Solar Zenith Angle. Database covering hourly. We can customize the api attributes based on features we need. Database converted to csv and added to github.
+A database covering minute to minute solar panel output and weather data from 2015 to 2018.  Export to CSV.
+
+![parking lot array](Resources/Images/parking_lot_canopy.jpg)
+
+### National Solar Radiation Database
+https://nsrdb.nrel.gov/ 
+#### Features: 
+- Temperature
+- Wind
+- Solar Irradiance
+- Solar Zenith Angle
+
+Database covering hourly global solar irradiance. We can customize the api attributes based on features we need. Database converted to csv.
+
+![solar irradiance map](Resources/Images/NSRDB Viewer.PNG)
 
 ## Questions we hope to answer:
 
