@@ -1,0 +1,82 @@
+# Input tables will be from Postgresql, transformed through python
+
+# Machine Learning Mock-up for Solar Data predictions
+
+# Create a method that creates a new Sequential model with hyperparameter options
+def create_model(hp):
+    nn_model = tf.keras.models.Sequential()
+
+    # Allow keras_tuner to decide which activation function to use in hidden layers
+    activation = hp.Choice('activation',['relu','tanh','elu','sigmoid'])
+    
+    # Allow keras_tuner to decide number of neurons in first layer
+    nn_model.add(tf.keras.layers.Dense(
+        units=hp.Int('first_units',
+                     min_value=input_features,
+                     max_value=input_features,
+                     step=10),
+        activation='relu',
+        input_dim=input_features))
+
+    # Allow keras_tuner to decide number of hidden layers and neurons in hidden layers
+    for i in range(hp.Int('num_layers', 3, 5)):
+        nn_model.add(tf.keras.layers.Dense(
+            units=hp.Int('units_' + str(i),
+                         min_value=40,
+                         max_value=80,
+                         step=10),
+            activation=activation))
+    
+    nn_model.add(tf.keras.layers.Dense(units=1, 
+                                       activation="sigmoid"))
+
+    # Compile the model
+    nn_model.compile(loss="binary_crossentropy", 
+                     optimizer="adam", 
+                     metrics=["accuracy"])
+    
+    return nn_model
+
+# Define the checkpoint path and filenames
+os.makedirs("checkpoints/",exist_ok=True)
+checkpoint_path = "checkpoints/checkpoint_{epoch:002d}.hdf5"
+
+# Create a callback that saves the model's weights every 5th epoch
+cp_callback = ModelCheckpoint(
+    filepath=checkpoint_path,
+    verbose=1,
+    save_weights_only=True,
+    save_freq=n*5)
+
+# Prepare the keras_tuner library
+tuner = kt.Hyperband(
+    create_model,
+    objective="val_accuracy",
+    max_epochs=20,
+    hyperband_iterations=2,
+    overwrite=True)
+
+# Run the keras_tuner search for best hyperparameters
+tuner.search(X_train_scaled,y_train,epochs=20,
+             validation_data=(X_test_scaled,y_test), callbacks=[cp_callback])
+
+# Get top three model hyperparameters and print the values
+top_hyper = tuner.get_best_hyperparameters(3)
+for param in top_hyper:
+    print(param.values)
+
+# Evaluate the top three models against the test dataset
+top_model = tuner.get_best_models(3)
+for model in top_model:
+    model_loss, model_accuracy = model.evaluate(X_test_scaled,
+                                                y_test,verbose=2)
+    print(f"Loss: {model_loss}, Accuracy: {model_accuracy}")
+
+# Get second best model hyperparameters
+second_hyper = tuner.get_best_hyperparameters(2)[1]
+second_hyper.values
+
+second_model = tuner.get_best_models(2)[1]
+model_loss, model_accuracy = second_model.evaluate(X_test_scaled,
+                                                   y_test,verbose=2)
+print(f"Loss: {model_loss}, Accuracy: {model_accuracy}")
