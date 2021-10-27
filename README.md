@@ -55,6 +55,10 @@ Stan, Tyler, Elham
 ### X: 
 Tony Poolsombat, Shikhar
 
+## Database and ERD
+![QuickDBD-export](https://user-images.githubusercontent.com/84756166/138979836-366e7b38-af85-4e99-9bbd-37d2e7905466.png)
+
+We will use a sql database to house our data. Sample data is pulled from https://pvdata.nist.gov/ and loaded to the database. We will merge data from our weather table with the features for our linear regression. Our machine learning model takes features from the solarData table and performs linear regression.  
 ## Machine Learning Model:
 
 We plan on using a multiple linear regression model with weather data as features (solar angle, solar irradiance, temperature, wind) and electrical output of the solar panels as the target. We can use this model to predict the potential energy of a given location based on their climate and latitude using widely available solar irradiance and weather data. We will utilize a PostgreSQL Database connected to our machine learning model which will be run using Python and it's data analytics libraries such as Pandas, SkLearn, and many others. Another possible model we could use is a multi-layer neural network with sigmoid and non-sigmoid activations. The models will be built with static and dynamic configurations for differential testing.
