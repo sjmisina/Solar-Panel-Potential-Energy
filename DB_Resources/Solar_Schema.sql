@@ -14,7 +14,7 @@ CREATE TABLE NIST2017 (
     "InvVDCin_Avg" float   NOT NULL,
     "Array Tilt" float   NOT NULL
 );
-CREATE TABLE NIST2018 (
+CREATE TABLE NISTData (
     "TIMESTAMP" date   NOT NULL,
     "InvVDCin_Avg" float   NOT NULL,
     "Array Tilt" float   NOT NULL
