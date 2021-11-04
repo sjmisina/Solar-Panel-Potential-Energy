@@ -1,0 +1,5 @@
+SELECT nrel.* , nist."gInvVDCin_Avg", nist."gInvVDCin_Avg", 
+		nist."gArray Tilt", nist."rInvVDCin_Avg", nist."rArray Tilt", 
+		nist."cInvVDCin_Avg", nist."cArray Tilt" FROM data."NRELData" nrel
+INNER JOIN data."NISTAll" nist
+ON nist."TIMESTAMP" = nrel."TIMESTAMP"
