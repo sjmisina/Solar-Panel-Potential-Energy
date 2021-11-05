@@ -1,5 +1,4 @@
-
-CREATE TABLE IF NOT EXISTS data."NIST_Single"
+CREATE TABLE IF NOT EXISTS "NIST_Single"
 (
     "TIMESTAMP" timestamp without time zone NOT NULL,
     "InvVDCin_Avg" double precision NOT NULL,
@@ -9,9 +8,9 @@ CREATE TABLE IF NOT EXISTS data."NIST_Single"
 
 
 -- create new right-joined table
-CREATE TABLE data."solar_data_v2" AS (
+CREATE TABLE "solar_data_v2" AS (
 	SELECT nrel.*, nist."InvVDCin_Avg", nist."Array_Tilt"
-	from data."NRELData" nrel
-	RIGHT JOIN data."NIST_Single" nist
+	from "NREL_Data" nrel
+	RIGHT JOIN "NIST_Single" nist
 	ON nrel."TIMESTAMP" = nist."TIMESTAMP"
 	);
