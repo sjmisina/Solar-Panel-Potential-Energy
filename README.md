@@ -56,7 +56,7 @@ Stan, Tyler, Elham
 Tony Poolsombat, Shikhar
 
 ## Database and ERD
-![QuickDBD-export](https://user-images.githubusercontent.com/84756166/138979836-366e7b38-af85-4e99-9bbd-37d2e7905466.png)
+![QuickDBD-export](Resources/Images/QuickDBD-export.png)
 ![Screen Shot 2021-10-26 at 9 16 42 PM](https://user-images.githubusercontent.com/84756166/138983843-ef5cb8ec-c7af-474e-b18c-80fd1cb9cb59.png)
 ![Screen Shot 2021-10-26 at 9 14 53 PM](https://user-images.githubusercontent.com/84756166/138983854-dbab7939-a248-4f74-8a93-04ae02e3815a.png)
 
