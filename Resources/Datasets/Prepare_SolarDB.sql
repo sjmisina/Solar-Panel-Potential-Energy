@@ -53,7 +53,8 @@ CREATE TABLE IF NOT EXISTS "NIST_Single"
 
 -- "solar_data" has VDC and Tilt inner joined on the 
 -- NIST TIMESTAMP eliminating rows where ground, roof, 
--- or canopy data is/are missing.
+-- or canopy data is/are missing. All data for the 
+-- date/time inner joined on the NREL TIMESTAMP.
 
 -- "solar_data_v2" contains one column of VDC and Array_Tilt, 
 -- right joined with NREL data on the NIST TIMESTAMP
