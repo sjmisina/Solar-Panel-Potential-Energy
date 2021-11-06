@@ -1,3 +1,7 @@
+-- create a new database named SolarDB in your local PostgreSQL 11 server
+-- leave empty with all default settings
+
+
 CREATE TABLE IF NOT EXISTS NIST_Data (
 	"TIMESTAMP" timestamp without time zone,
 	"gInvVDCin_Avg" float NOT NULL,	
@@ -7,6 +11,8 @@ CREATE TABLE IF NOT EXISTS NIST_Data (
 	"cInvVDCin_Avg" float NOT NULL,	
 	"cArray_Tilt" int NOT NULL
 );
+-- populate with NIST_Data.csv by way of PostgreSQL import tool
+
 
 CREATE TABLE IF NOT EXISTS "NREL_Data"
 (
@@ -29,6 +35,30 @@ CREATE TABLE IF NOT EXISTS "NREL_Data"
     "Relative Humidity" float NOT NULL,
     "Precipitable Water" float NOT NULL
 )
+-- populate with NREL_Data.csv by way of PostgreSQL import tool
+
+
+CREATE TABLE IF NOT EXISTS "NIST_Single"
+(
+    "TIMESTAMP" timestamp without time zone NOT NULL,
+    "InvVDCin_Avg" double precision NOT NULL,
+    "Array_Tilt" integer NOT NULL
+)
+-- populate with NIST_Single.csv by way of PostgreSQL import tool
+
+
+
+-- Create new tables solar_data and solar_data_v2. 
+-- These are tables of combined data for preprocessing.
+
+-- "solar_data" has VDC and Tilt inner joined on the 
+-- NIST TIMESTAMP eliminating rows where ground, roof, 
+-- or canopy data is/are missing.
+
+-- "solar_data_v2" contains one column of VDC and Array_Tilt, 
+-- right joined with NREL data on the NIST TIMESTAMP
+
+-- The following scripts will create and populate these tables.
 
 CREATE TABLE solar_data AS (
 SELECT 
@@ -42,4 +72,17 @@ SELECT
 FROM "NREL_Data" nrel
 INNER JOIN nist_data nist
 ON nist."TIMESTAMP" = nrel."TIMESTAMP"
-)
+);
+
+CREATE TABLE "solar_data_v2" AS (
+SELECT
+	nrel.*, 
+	nist."InvVDCin_Avg", 
+	nist."Array_Tilt"
+FROM "NREL_Data" nrel
+RIGHT JOIN "NIST_Single" nist
+ON nrel."TIMESTAMP" = nist."TIMESTAMP"
+);
+	
+
+-- SolarDB is complete
