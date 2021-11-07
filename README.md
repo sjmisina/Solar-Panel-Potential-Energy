@@ -61,6 +61,11 @@ Tony Poolsombat, Shikhar
 ![Screen Shot 2021-10-26 at 9 14 53 PM](https://user-images.githubusercontent.com/84756166/138983854-dbab7939-a248-4f74-8a93-04ae02e3815a.png)
 
 We will use a postgreSQL database to house our data. Sample data is pulled from https://pvdata.nist.gov/ and loaded to the database. We will merge data from our weather table with the features for our linear regression. Our machine learning model takes features from the solarData table and performs linear regression.  
+# SEGMENT 2:
+
+## Presentation:
+[Link to Google Slides Presentation](https://docs.google.com/presentation/d/1VAlRtXi8htVfDL747pvQQay941csKvLOSisLYfFJVyo/edit?usp=sharing)
+
 ## Machine Learning Model:
 ### Model Location: 
 [Solar Neural Net](Code/Machine%20Learning/solar_nn_regression.ipynb)
@@ -83,7 +88,36 @@ The data was split into training and testing sets using the python library sciki
 
 In this project we are looking to use various weather features to predict the voltage output of solar panel arrays.  Because of this we knew we would want some kind of regression model.  We have a group of weather features but we are not certain which ones will be significant so we knew unsupervised machine learning would be the route we would take.  The combination of regression and unsupervised learning made us decide that a neural network was the best fit for our analysis.  Using a neural net means our model will be able to handle noise in the training data well and may provide a higher degree of accuracy than standard linear regression if we are able to build the model properly.  A limitation of neural nets is that the path to optimizing the model is unclear and is mostly dependent on trial and error.  This is the main limitation of neural nets. Although they are able to approximate nearly any function it is very difficult to use the model to actually give you the function that is being approximated.  This means that we cannot distil our model into a function and we are reliant on the model to provide us with the functions output.  Despite these drawbacks we still believe that a neural net is the right tool for our analysis.
 
+# Database 
 
-[Link to DASHBOARD blueprint](https://public.tableau.com/views/Solar-Panel-Dashboard/Story1?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link)
+### Database stores static data for use during the project
+<img width="1530" alt="Screen Shot 2021-11-07 at 5 21 57 PM" src="https://user-images.githubusercontent.com/84756166/140663922-f5b6e5a4-ac72-47fb-b32b-1b82a962e5d3.png">
 
-[Link to Google Slides Presentation](https://docs.google.com/presentation/d/1VAlRtXi8htVfDL747pvQQay941csKvLOSisLYfFJVyo/edit?usp=sharing)
+### Database interfaces with the project in some format (e.g., scraping updates the database, or database connects to the model)
+![Screen Shot 2021-11-07 at 5 24 42 PM](https://user-images.githubusercontent.com/84756166/140663994-1b5af3d3-100f-4eeb-a084-1a9aff9f2271.png)
+
+### Includes at least two tables
+<img width="356" alt="Screen Shot 2021-11-07 at 5 22 52 PM" src="https://user-images.githubusercontent.com/84756166/140663942-8ba9f0f1-4893-477a-9f80-2a5b4473af86.png">
+
+### Includes at least one join using the database language
+![Screen Shot 2021-11-07 at 5 23 58 PM](https://user-images.githubusercontent.com/84756166/140663970-a4d35ae1-4295-4f4d-80d6-2791c32f570d.png)
+
+### Includes at least one connection string (using SQLAlchemy)
+![connectionStringex](https://user-images.githubusercontent.com/84756166/140663795-76861b20-4d11-4def-9711-834aa8649444.png)
+
+### Updated ERD 
+![QuickDBD-export](Resources/Images/ERD.png)
+
+# Dashboard 
+[Link to DASHBOARD blueprint](Resources/Solar-Panel-Dashboard-Visualizations.pptx)
+
+### Description of the tool(s) that will be used to create final dashboard 
+We intend to host our dashboard on a webpage
+* Tableau 
+* JavaScript
+* D3
+
+### Description of interactive element(s) 
+* Buttons click through to detail data 
+* Charts and maps allow clickthrough to underlying data
+* Drop down allows you to view 1 of 3 panel arrays
