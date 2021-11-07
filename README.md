@@ -11,7 +11,7 @@ The reason we selected this topic is to hopefully encourage state governments an
 ## Description of the data sources:
 
 ### NIST Photovoltaic Array Database 
-https://pvdata.nist.gov/ 
+[NIST PV Database](https://pvdata.nist.gov/) 
 #### Features: 
 - Electrical output
 - Irradiance
@@ -24,7 +24,7 @@ A database covering minute to minute solar panel output and weather data from 20
 ![parking lot array](Resources/Images/parking_lot_canopy.jpg)
 
 ### National Solar Radiation Database
-https://nsrdb.nrel.gov/ 
+[NREL Database](https://nsrdb.nrel.gov/) 
 #### Features: 
 - Temperature
 - Wind
@@ -84,8 +84,6 @@ The data was split into training and testing sets using the python library sciki
 In this project we are looking to use various weather features to predict the voltage output of solar panel arrays.  Because of this we knew we would want some kind of regression model.  We have a group of weather features but we are not certain which ones will be significant so we knew unsupervised machine learning would be the route we would take.  The combination of regression and unsupervised learning made us decide that a neural network was the best fit for our analysis.  Using a neural net means our model will be able to handle noise in the training data well and may provide a higher degree of accuracy than standard linear regression if we are able to build the model properly.  A limitation of neural nets is that the path to optimizing the model is unclear and is mostly dependent on trial and error.  This is the main limitation of neural nets. Although they are able to approximate nearly any function it is very difficult to use the model to actually give you the function that is being approximated.  This means that we cannot distil our model into a function and we are reliant on the model to provide us with the functions output.  Despite these drawbacks we still believe that a neural net is the right tool for our analysis.
 
 
-Link to DASHBOARD blueprint
-https://public.tableau.com/views/Solar-Panel-Dashboard/Story1?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link
+[Link to DASHBOARD blueprint](https://public.tableau.com/views/Solar-Panel-Dashboard/Story1?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link)
 
-Link to Google Slides Presentation 
-https://docs.google.com/presentation/d/1VAlRtXi8htVfDL747pvQQay941csKvLOSisLYfFJVyo/edit?usp=sharing
+[Link to Google Slides Presentation](https://docs.google.com/presentation/d/1VAlRtXi8htVfDL747pvQQay941csKvLOSisLYfFJVyo/edit?usp=sharing)
