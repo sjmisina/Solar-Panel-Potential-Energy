@@ -62,10 +62,27 @@ Tony Poolsombat, Shikhar
 
 We will use a postgreSQL database to house our data. Sample data is pulled from https://pvdata.nist.gov/ and loaded to the database. We will merge data from our weather table with the features for our linear regression. Our machine learning model takes features from the solarData table and performs linear regression.  
 ## Machine Learning Model:
+### Model Location: 
+[Solar Neural Net](Code/Machine%20Learning/solar_nn_regression.ipynb)
 
 We plan on using a linear regression model with weather data as features (solar angle, solar irradiance, temperature, wind) and electrical output of the solar panels as the target. We can use this model to predict the potential energy of a given location based on their climate and latitude using widely available solar irradiance and weather data. We will utilize a PostgreSQL Database connected to our machine learning model which will be run using Python and it's data analytics libraries such as Pandas, SkLearn, and many others. Another possible model we could use is a multi-layer neural network with sigmoid and non-sigmoid activations. The models will be built with static and dynamic configurations for differential testing.
 
-Our machine learning model is in folder in ml structure above 
+### Description of preliminary data preprocessing:
+
+Our data was obtained from two sources:  The National Institute of Standards and Technology (NIST) and the National Solar Radiation Database (NREL).  The NIST data contained data on three solar arrays located on the NIST campus.  The data was downloaded from the NIST website in CSV format with separate folders for each month and each year.  A python script was made to extract data from all the CSVs and distill them into one dataframe. Additionally the NIST dataset contained minute to minute data from 2015 to 2018 while the NREL data was in half-hour intervals. The NIST dataset had to be trimmed down to align with the NREL timestamps. The NREL data was obtained through an API and a script that pulled all data from 2015 to 2018. 
+
+### Description of preliminary feature engineering and preliminary feature selection, including their decision-making process:
+
+The NIST data had many features about the arrays and about the local weather but we decided that we would just use DC voltage output and use the weather data from NREL.  We decided on this approach because the NREL dataset covers the whole globe.  This way we can use any dataset which has the dc voltage output of solar panels and timestamps.  The NREL dataset contains a number of significant weather features covering solar irradiance, surface weather conditions and solar zenith angle.
+
+### Description of how data was split into training and testing sets:
+
+The data was split into training and testing sets using the python library scikit-learn’s function train_test_split.  We used the default setting of splitting 25% of the data off for making a test set. 
+
+### Explanation of model choice, including limitations and benefits: 
+
+In this project we are looking to use various weather features to predict the voltage output of solar panel arrays.  Because of this we knew we would want some kind of regression model.  We have a group of weather features but we are not certain which ones will be significant so we knew unsupervised machine learning would be the route we would take.  The combination of regression and unsupervised learning made us decide that a neural network was the best fit for our analysis.  Using a neural net means our model will be able to handle noise in the training data well and may provide a higher degree of accuracy than standard linear regression if we are able to build the model properly.  A limitation of neural nets is that the path to optimizing the model is unclear and is mostly dependent on trial and error.  This is the main limitation of neural nets. Although they are able to approximate nearly any function it is very difficult to use the model to actually give you the function that is being approximated.  This means that we cannot distil our model into a function and we are reliant on the model to provide us with the functions output.  Despite these drawbacks we still believe that a neural net is the right tool for our analysis.
+
 
 Link to DASHBOARD blueprint
 https://public.tableau.com/views/Solar-Panel-Dashboard/Story1?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link
