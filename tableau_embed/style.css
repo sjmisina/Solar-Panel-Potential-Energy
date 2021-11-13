@@ -1,13 +1,14 @@
 html,
 body,
-#viz1636826163352 {
+.tableauPlaceholder{
     width:100%;
     height: 100%;
     display: flex;
     flex: 1 1 auto;
-    padding: 0;
-    margin:0;
-
+    padding-top: 5;
+    margin-top: 5;
+  
+    
 }
 
 
@@ -21,9 +22,8 @@ body,
     background-color: white;
     padding: 1rem 2rem;
     margin: 1rem 0rem;
-    
-
-    padding-left: 25rem;
+    padding-left:17rem;
 
 
 }
+
