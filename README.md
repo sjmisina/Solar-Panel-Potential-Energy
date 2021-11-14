@@ -64,7 +64,7 @@ We will use a postgreSQL database to house our data. Sample data is pulled from 
 # SEGMENT 2:
 
 ## Presentation:
-![project powerpoint link](Resources/Solar Panel Potential Energy.pptx)
+![Presentation Slides](Resources/Solar%20Panel%20Potential%20Energy.pptx)
 
 ## Machine Learning Model:
 ### Model Location: 
