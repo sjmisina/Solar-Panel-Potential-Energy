@@ -15,7 +15,7 @@ body,
 
 .container {
     display: flex;
-    width:50%;
+    width:100%;
     justify-content: center;
     align-items: flex-start;
     text-align: center;
