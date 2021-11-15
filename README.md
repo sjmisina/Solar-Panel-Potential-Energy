@@ -95,7 +95,7 @@ In this project we are looking to use various weather features to predict the vo
 
 In an effort to circumvent the “black box” problem of neural nets where the significance of features is unintelligible we ran our data through other models to get a sense of the importance of the features. Using the random forest model we were able to clearly quantify the correlations between our features and the target. We found that in the random forest model the feature Solar Zenith Angle was by far the most important. The random forest helped us to discover what our seaborn charts and Tableau graphs were visually informing us.
 
-We built a MLPRegressor model based on its success with accurate predictions for vehicle movement in a chaotic environment. We were able to train the model to an R2 Score of 0.956. Incorporating all the database features, it gives our primary model credibility as this second model shows very accurate predictions produced from a different machine learning model.
+We built a MLPRegressor model based on its success with accurate predictions for vehicle movement in a chaotic environment. We were able to train the model to an R2 test score of 0.956. Incorporating all the database features, it gives our primary model credibility as this second model shows very accurate predictions produced from a different machine learning model.
 
 Being able to look at other models brought us great value in terms of interpretability of our features that would be impossible to find using only  our neural network model. 
 
