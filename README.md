@@ -53,9 +53,8 @@ We will use a postgreSQL database to house our data. Sample data is pulled from 
 # SEGMENTS 2-3:
 
 ## Presentation:
-[Presentation Slides](Presentation/Capstone_Prez.pptx)
+[Presentation Slides](https://docs.google.com/presentation/d/1IF9l_27bKdO1uo7g_AFLOn5IpFv0__G1manzYC-N_hI/edit?usp=sharing)
 ![Screen Shot 2021-11-14 at 4 37 12 PM](https://user-images.githubusercontent.com/84756166/141699624-e34675dc-bdfc-4159-a563-847ea562a8b3.png)
-
 
 ## Machine Learning Model:
 ### Model Location: 
