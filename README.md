@@ -58,7 +58,7 @@ We will use a postgreSQL database to house our data. Sample data is pulled from 
 
 ## Machine Learning Model:
 ### Model Location: 
-[Solar Neural Net](Code/Machine%20Learning/solar_nn_regression.ipynb)
+[Solar Neural Net](Code/Machine%20Learning/solar_nn.ipynb)
 
 We plan on using a linear regression model with weather data as features (solar angle, solar irradiance, temperature, wind) and electrical output of the solar panels as the target. We can use this model to predict the potential energy of a given location based on their climate and latitude using widely available solar irradiance and weather data. We will utilize a PostgreSQL Database connected to our machine learning model which will be run using Python and it's data analytics libraries such as Pandas, SkLearn, and many others. Another possible model we could use is a multi-layer neural network with sigmoid and non-sigmoid activations. The models will be built with static and dynamic configurations for differential testing.
 
