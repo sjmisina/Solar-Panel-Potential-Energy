@@ -93,16 +93,16 @@ In this project we are looking to use various weather features to predict the vo
 
 ### Explanation of changes in model choice (if changes occurred between the Segment 2 and Segment 3 deliverables) 
 
-
+In an effort to circumvent the “black box” problem of neural nets where the significance of features is unintelligible we ran our data through other models to get a sense of the importance of the features.  Using the random forest model we were able to clearly quantify the correlations between our features and the target. We found that in the random forest model the feature Solar Zenith Angle was by far the most important. The random forest helped us to discover what our seaborn charts and Tableau graphs were visually informing us on. Being able to look at other models brought us great value in terms of interpretability of our features that would be impossible to find using only  our neural network model. 
 
 ### Description of how they have trained the model thus far, and any additional training that will take place 
 
-
+Initially our model was unable to make any predictions.  We found, through experimentation, that we needed to add more neurons in order to make the model converge.  Once we increased the number of neurons we were left with a highly accurate model with an R2 score of 0.975.  Continuing to experiment with different configurations of the model we found that adding more hidden layers and more neurons did not lead to a significant increase in R2 score or MSE loss while becoming much more computationally expensive.
 
 
 ### Description of current accuracy score
 
-
+The lowest MSE score at the end of our current run of test phases is 640.80. We found the loss to be a decent figure in comparison to the starting point of approximately 2,300 and initially over 4,000 in our first few run trials.  To lower our losses, we have optimized our model through the Keras Optimization feature, trying a variety of additional layers as well as adding more and less neurons. We have also tweaked our optimization technique from “Adam” to “Adamax” and found our losses to have dropped by a considerable margin. After a few trial runs, and seeing our model output a loss of 640.8 at only 50 epochs, we decided to run our model into 250 epochs and saw a decrease in MSE. However, this did lower our R2 score as well. At the moment, we are analyzing an acceptable impact of our loss ratio versus our high R2 score. 
 
 
 # Database 
