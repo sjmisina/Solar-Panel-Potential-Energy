@@ -43,18 +43,6 @@ Database covering hourly global solar irradiance. We can customize the api attri
 - Could these predictions lead to policy adoption and changes?
 - Can the study be used to promote investment in solar power generation facilities? 
 
-
-## Communication Protocols:
-
-### Square: 
-JP
-### Triangle: 
-Elham, Shikhar, 
-### Circle: 
-Stan, Tyler, Elham
-### X: 
-Tony Poolsombat, Shikhar
-
 ## Database and ERD
 ![QuickDBD-export](Resources/Images/ERD.png)
 ![Screen Shot 2021-10-26 at 9 16 42 PM](https://user-images.githubusercontent.com/84756166/138983843-ef5cb8ec-c7af-474e-b18c-80fd1cb9cb59.png)
