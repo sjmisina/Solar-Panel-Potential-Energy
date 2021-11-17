@@ -122,7 +122,7 @@ The lowest MSE score at the end of our current run of test phases is 640.80. We 
 
 [LINK to MLM DASHBOARD](https://public.tableau.com/views/Solar_data_v2/MLM_Dashboard?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link)
 
-[Link to dashboard BLUEPRINT](Resources/Previous_iterations_Pres:VIZ/Solar-Panel-Dashboard-Visualizations.pptx)
+[Link to dashboard BLUEPRINT](Resources/Images/Solar_Panel_Presentation.pdf)
 
 ### Description of the tool(s) that will be used to create final dashboard 
 * Tableau 
