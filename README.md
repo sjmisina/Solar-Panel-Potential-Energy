@@ -8,7 +8,6 @@
 - Stan Misina 
 - Tony Prahtchaya Poonsombaht 
 
-
 ## Selected Topic:
 
 ### A study of how natural factors such as solar irradiance, solar angle, cloud cover, rainfall and more effect solar panel power generation.
@@ -78,7 +77,7 @@ Our data was obtained from two sources:  The National Institute of Standards and
 
 ### Description of preliminary feature engineering and preliminary feature selection, including their decision-making process:
 
-The NIST data had many features about the arrays and about the local weather but we decided that we would just use DC voltage output from NIST and use the weather data from NREL.  We decided on this approach because the NREL dataset covers the whole globe.  This way we can use any dataset which has the dc voltage output of solar panels and timestamps.  The NREL dataset contains a number of significant weather features covering solar irradiance, surface weather conditions and solar zenith angle.
+The NIST data had many features about the arrays and about the local weather but we decided that we would just use DC voltage output from NIST and use the weather data from NREL.  We decided on this approach because the NREL dataset covers the whole globe.  This way we can use any dataset which has the dc voltage output of solar panels and timestamps.  The NREL dataset contains a number of significant weather features covering solar irradiance, surface weather conditions, and solar zenith angle.
 
 ### Description of how data was split into training and testing sets:
 
@@ -86,13 +85,13 @@ The data was split into training and testing sets using the python library sciki
 
 ### Explanation of model choice, including limitations and benefits: 
 
-In this project we are looking to use various weather features to predict the voltage output of solar panel arrays.  Because of this we knew we would want some kind of regression model.  We have a group of weather features but we are not certain which ones will be significant so we knew unsupervised machine learning would be the route we would take.  The combination of regression and unsupervised learning made us decide that a neural network was the best fit for our analysis.  Using a neural net means our model will be able to handle noise in the training data well and may provide a higher degree of accuracy than standard linear regression if we are able to build the model properly.  A limitation of neural nets is that the path to optimizing the model is unclear and is mostly dependent on trial and error.  This is the main limitation of neural nets. Although they are able to approximate nearly any function it is very difficult to use the model to actually give you the function that is being approximated.  This means that we cannot distil our model into a function and we are reliant on the model to provide us with the functions output.  Despite these drawbacks we still believe that a neural net is the right tool for our analysis.
+In this project we are looking to use various weather features to predict the voltage output of solar panel arrays.  Because of this we knew we would want some kind of regression model.  We have a group of weather features but we are not certain which ones will be significant so we knew supervised machine learning would be the route we would take.  The combination of regression and supervised learning made us decide that a neural network was the best fit for our analysis.  Using a neural net means our model will be able to handle noise in the training data well and may provide a higher degree of accuracy than standard linear regression if we are able to build the model properly.  A limitation of neural nets is that the path to optimizing the model is unclear and is mostly dependent on trial and error.  This is the main limitation of neural nets. Although they are able to approximate nearly any function it is very difficult to use the model to actually give you the function that is being approximated.  This means that we cannot distil our model into a function and we are reliant on the model to provide us with the functions output.  Despite these drawbacks we still believe that a neural net is the right tool for our analysis.
 
 ### Explanation of changes in model choice (if changes occurred between the Segment 2 and Segment 3 deliverables) 
 
 In an effort to circumvent the “black box” problem of neural nets where the significance of features is unintelligible we ran our data through other models to get a sense of the importance of the features. Using the random forest model we were able to clearly quantify the correlations between our features and the target. We found that in the random forest model the feature Solar Zenith Angle was by far the most important. The random forest helped us to discover what our seaborn charts and Tableau graphs were visually informing us.
 
-We built a MLPRegressor model based on its success with accurate predictions for vehicle movement in a chaotic environment. We were able to train the model to an R2 test score of 0.976. Incorporating all the database features, it gives our primary model credibility as this second model shows very accurate predictions produced from a different machine learning model.
+We built a MLPRegressor model based on its success with accurate predictions for vehicle movement in a chaotic environment. We were able to train the model to an R2 test score of 0.958. Incorporating all the database features, it gives our primary model credibility as this second model shows very accurate predictions produced from a different machine learning model.
 
 After trying these two other models we decided to continue using a neural network as our main model.
 
