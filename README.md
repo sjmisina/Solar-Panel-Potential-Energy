@@ -1,5 +1,14 @@
 # Solar Panel Potential Energy
 
+## Contributors:
+- Elham Amini
+- Shikhar Bahadur Bhandari 
+- JP Burgess
+- Tyler Lentini
+- Stan Misina 
+- Tony Prahtchaya Poonsombaht 
+
+
 ## Selected Topic:
 
 ### A study of how natural factors such as solar irradiance, solar angle, cloud cover, rainfall and more effect solar panel power generation.
