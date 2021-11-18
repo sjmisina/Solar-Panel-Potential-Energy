@@ -78,7 +78,7 @@ Our data was obtained from two sources:  The National Institute of Standards and
 
 ### Description of preliminary feature engineering and preliminary feature selection, including their decision-making process:
 
-The NIST data had many features about the arrays and about the local weather but we decided that we would just use DC voltage output and use the weather data from NREL.  We decided on this approach because the NREL dataset covers the whole globe.  This way we can use any dataset which has the dc voltage output of solar panels and timestamps.  The NREL dataset contains a number of significant weather features covering solar irradiance, surface weather conditions and solar zenith angle.
+The NIST data had many features about the arrays and about the local weather but we decided that we would just use DC voltage output from NIST and use the weather data from NREL.  We decided on this approach because the NREL dataset covers the whole globe.  This way we can use any dataset which has the dc voltage output of solar panels and timestamps.  The NREL dataset contains a number of significant weather features covering solar irradiance, surface weather conditions and solar zenith angle.
 
 ### Description of how data was split into training and testing sets:
 
@@ -94,7 +94,9 @@ In an effort to circumvent the “black box” problem of neural nets where the 
 
 We built a MLPRegressor model based on its success with accurate predictions for vehicle movement in a chaotic environment. We were able to train the model to an R2 test score of 0.976. Incorporating all the database features, it gives our primary model credibility as this second model shows very accurate predictions produced from a different machine learning model.
 
-Being able to look at other models brought us great value in terms of interpretability of our features that would be impossible to find using only  our neural network model. 
+After trying these two other models we decided to continue using a neural network as our main model.
+
+Being able to look at other models brought us great value in terms of interpretability of our features that would be impossible to find using only our neural network model. 
 
 ### Description of how they have trained the model thus far, and any additional training that will take place 
 
