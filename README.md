@@ -12,9 +12,9 @@
 
 ### A study of how natural factors such as solar irradiance, solar angle, cloud cover, rainfall and more effect solar panel power generation.
 
-## Reason why we selected the topic:
+## Analysis Intention:
 
-The reason we selected this topic is to hopefully encourage state governments and buisnesses to invest in solar energy stations and solar technology. We would like to show how location and weather patterns can inform the potential for solar panel electrical generation.  We propose building a machine learning model that takes solar irradiance, temperature, wind, cloud cover and solar angle into account to provide an estimate of solar panel generation potential.  Hopefully we could use this model to encourage  state governments to invest in solar power by showing the predicted amount of power generation.  We hope to show promising results, and enthuse our government into writing and approving more policies and bills in regards to the production of solar stations and solar technology. 
+Our analysis here is presented to encourage investment in solar energy generation technology. We are showing how location and weather patterns can inform the potential for solar panel electrical generation. We propose building a machine learning model that takes solar irradiance, temperature, wind, cloud cover and solar angle into account in providing an estimate of solar panel generation potential. We intend to show promising results, and enthuse our government into writing and approving more policies and bills in regards to production of solar stations and solar technology. 
 
 ## Description of the data sources:
 
@@ -43,7 +43,7 @@ Database covering hourly global solar irradiance. We can customize the api attri
 
 ![solar irradiance map](https://github.com/jpburgess/Solar-Panel-Potential-Energy/blob/6d76a4e52033fb125a89e8ca9260ad007cf569d1/Resources/Images/NRSDB%20Viewer.PNG)
 
-## Questions we hope to answer:
+## Questions we intend to answer:
 
 - Can we find a relation between weather patterns and solar power generation to inform state governments of the potential for solar power in their area?
 - Can we find a relation between weather patterns and solar power generation?
